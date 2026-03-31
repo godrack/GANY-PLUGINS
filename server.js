@@ -4,14 +4,12 @@
 
 const express = require('express');
 const path = require('path');
-const cors = require('cors');
 const sqlite3 = require('sqlite3').verbose();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 const DB_PATH = path.join(__dirname, 'save.db');
 
-app.use(cors());
 app.use(express.json());
 app.use(express.static(__dirname)); // Serve o seu index.html
 
